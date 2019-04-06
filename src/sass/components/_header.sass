@@ -1,0 +1,26 @@
+.header
+	flex: 0 0 auto
+	padding: 10px 16px
+	background: $primary
+	+clr
+	&__nav-btn
+		position: relative
+		float: left
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		padding: 7px
+		width: 50px
+		height: 50px
+		background: none
+		&:before,
+		&:after,
+		span
+			display: block
+			border-radius: 3px
+			width: 36px
+			height: 6px
+			background: $white
+		&:before,
+		&:after
+			content: ''

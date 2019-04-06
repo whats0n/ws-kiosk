@@ -1,0 +1,39 @@
+---
+title: Index page
+innerClass: 'inner_center'
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<div class="form-box">
+		<a href="#" class="form-box__logo">
+			<img src="img/logo.svg" alt="B2BSoft" class="form-box__logo-img">
+		</a>
+		<div class="form-box__title">Time Clock Manager</div>
+		<div class="field form-box__field">
+			<div class="field__label">Username</div>
+			<select class="select">
+				{% for item in range(0,5) %}
+					<option value="John Smith {{loop.index}}">John Smith {{loop.index}}</option>
+				{% endfor %}
+			</select>
+			<div class="message field__message">You clocked out for lunch at 1:00 pm Duration: 0:59</div>
+		</div>
+		<div class="field form-box__field">
+			<div class="field__label">Password</div>
+			{{mixins.passwordField()}}
+		</div>
+		<div class="form-box__footer">
+			<button class="btn form-box__btn">Clock Out</button>
+			<button class="btn btn_secondary form-box__btn">Start Lunch</button>
+		</div>
+	</div>
+	<div class="alert">
+		<button class="alert__close">
+			<span class="icon icon-cancel alert__icon"></span>
+		</button>
+		<div class="alert__text">Lunch started at 1:00 pm.  Bon Apetit!</div>
+	</div>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+.information
+	display: flex
+	border: 1px solid #D6D6D6
+	color: #3C434D
+	background: $white
+	&__status,
+	&__box
+		flex: 1 1 50%
+	&__box
+		padding: 20px 15px 37px
+	&__status
+		position: relative
+		padding: 15px
+		&:not(:last-child)
+			&:before
+				content: ''
+				position: absolute
+				top: 32px
+				right: 0
+				bottom: 32px
+				border-right: 1px solid #000000
+	&__title
+		padding: 15px
+		font-weight: 500
+		font-size: 26px
+		line-height: 1
+	&__value,
+	&__label,
+	&__subtitle
+		font-size: 22px
+		line-height: 1
+	&__value
+		flex: 1 1 auto
+		&-item
+			&:not(:last-child)
+				margin-bottom: 20px
+	&__label
+		flex: 0 0 auto
+		padding-right: 30px
+	&__text
+		display: flex
+		padding: 15px
+	&__subtitle
+		margin-bottom: 17px
+		text-align: center
+	&__row
+		margin: 0 auto
+		max-width: 339px
+		display: flex
+		justify-content: space-between

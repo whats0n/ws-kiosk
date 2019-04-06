@@ -1,0 +1,8 @@
+ProjectTitle: ws-kiosk
+
+PageList:
+- file: choose-location.html
+- file: clock-in.html
+- file: clock-out.html
+- file: configuration.html
+- file: dashboard.html

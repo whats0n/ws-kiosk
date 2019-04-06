@@ -1,0 +1,23 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<div class="box">
+		<div class="box__field">
+			{{mixins.switcher({
+				rightText: 'Enable Kiosk mode'
+			})}}
+		</div>
+		<div class="field box__field">
+			<div class="field__label field__label_lg">Access Code</div>
+			<input type="text" class="input input_sm input_sm-width">
+		</div>
+		<div class="box__footer">
+			<button class="btn btn_sm btn_primary box__btn">Save</button>
+		</div>
+	</div>
+
+{% endblock %}

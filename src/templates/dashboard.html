@@ -1,0 +1,76 @@
+---
+title: Index page
+innerClass: 'inner_simple'
+mainClass: 'main_simple'
+menu: 1
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<div class="frame">
+		<div class="frame__inner">
+			<div class="frame__row">
+				<div class="date frame__date">
+					<div class="date__title">11:15:25 AM</div>
+					<div class="date__meta">Tuesday, March 25, 2019</div>
+				</div>
+				<select class="select select_lg frame__location">
+					{% for item in range(0,5) %}
+						<option value="Location: Store {{loop.index}}">Location: Store {{loop.index}}</option>
+					{% endfor %}
+				</select>
+				<button class="btn btn_lg frame__clock-in">Clock In</button>
+			</div>
+			<div class="information frame__information">
+				<div class="information__status">
+					<div class="information__title">Alex Zinoviev</div>
+					<div class="information__text">
+						<div class="information__label">Status:</div>
+						<div class="information__value">
+							<div class="information__value-item">Clocked Out</div>
+							<div class="information__value-item">12:00 PM | Tue, March 26, 2019</div>
+						</div>
+					</div>
+				</div>
+				<div class="information__box">
+					<div class="information__subtitle">This Week</div>
+					<div class="information__row">
+						{% for item in [
+							{ title: 'Hours Worked', value: '18:56' },
+							{ title: 'Break Time', value: '2:02' }
+						] %}
+							<div class="information__col">
+								{{mixins.timeBox(item)}}
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			<div class="frame__box">
+				{{mixins.gridTable({
+					headers: [
+						{ name: 'date', text: 'Date' },
+						{ name: 'one-six', text: 'Clock In' },
+						{ name: 'one-six', text: 'Lunch Out' },
+						{ name: 'one-six', text: 'Lunch In' },
+						{ name: 'one-six', text: 'Clock Out' },
+						{ name: 'one-six', text: 'Duration' }
+					],
+					rows: [
+						{
+							items: [ 'Sun, March 24', '9:00 AM', '12:00 PM', '1:00 PM', '6:00 PM', '08:00' ]
+						},
+						{
+							items: [ 'Mon, March 25', '9:02 AM', '1:03 PM', '2:05 PM', '6:01 PM', '07:57' ]
+						},
+						{
+							items: [ 'Tue, March 26', '9:01 AM', '-', '-', '12:00 PM', '02:59' ]
+						}
+					]
+				})}}
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

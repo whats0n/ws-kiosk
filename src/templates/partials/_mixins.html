@@ -1,0 +1,43 @@
+{% macro passwordField(props) %}
+<div class="password-box">
+	<span class="password-box__icon"></span>
+	<input type="password" class="input password-box__input">
+</div>
+{% endmacro %}
+
+{% macro switcher(props) %}
+<label class="switcher">
+	<input type="checkbox" class="switcher__input">
+	<span class="switcher__icon"></span>
+	{% if props.rightText %}
+		<span class="switcher__text switcher__right">{{props.rightText}}</span>
+	{% endif %}
+</label>
+{% endmacro %}
+
+{% macro timeBox(props) %}
+<div class="time-box">
+	<div class="time-box__title">{{props.title}}</div>
+	<div class="time-box__value">{{props.value}}</div>
+	<div class="time-box__label">Hours</div>
+</div>
+{% endmacro %}
+
+{% macro gridTable(props) %}
+<div class="grid-table">
+	<div class="grid-table__header">
+		{% for item in props.headers %}
+			<div class="grid-table__col grid-table__col_{{item.name}}">{{item.text}}</div>
+		{% endfor %}
+	</div>
+	<div class="grid-table__body">
+		{% for row in props.rows %}
+			<div class="grid-table__row">
+				{% for item in row.items %}
+					<div class="grid-table__col grid-table__col_{{props.headers[loop.index0].name}}">{{item}}</div>
+				{% endfor %}
+			</div>
+		{% endfor %}
+	</div>
+</div>
+{% endmacro %}

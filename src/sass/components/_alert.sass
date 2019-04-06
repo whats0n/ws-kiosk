@@ -1,0 +1,29 @@
+.alert
+	position: relative
+	padding: 9px 20px
+	display: block
+	margin: 0 auto
+	width: 374px
+	border-radius: 6px
+	color: $color__alert
+	background: $bg__alert
+	font-family: inherit
+	font-size: 18px
+	line-height: 1.25
+	text-align: center
+	letter-spacing: 0.02em
+	&:not(:first-child)
+		margin-top: 21px
+	&__close
+		position: absolute
+		top: -9px
+		right: -12px
+		width: 25px
+		height: 25px
+		color: $black
+		background: none
+		+vertical
+	&__icon
+		display: inline-block
+		vertical-align: middle
+		font-size: 17px

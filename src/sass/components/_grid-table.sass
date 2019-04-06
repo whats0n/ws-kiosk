@@ -1,0 +1,23 @@
+.grid-table
+	overflow: hidden
+	border: 1px solid #E1E1E1
+	border-radius: 2px
+	&__header,
+	&__row
+		display: flex
+	&__col
+		padding: 15px
+		border: 1px solid #E1E1E1
+		background: $white
+		color: #3C434D
+		font-size: 20px
+		text-align: center
+		line-height: 1
+		&_one-six,
+		&_date
+			flex: 1 1 (100%/6)
+	&__row
+		.grid-table
+			&__col
+				&_date
+					font-size: 18px

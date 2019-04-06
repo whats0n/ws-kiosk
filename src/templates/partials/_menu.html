@@ -1,0 +1,25 @@
+<!-- begin menu -->
+<div class="menu">
+	<div class="menu__header">
+		<div class="menu__title">Computer Corner LLC</div>
+		<div class="menu__meta">Access Code 10020</div>
+	</div>
+	<nav class="menu__nav">
+		<ul class="menu__list">
+			{% for item in [
+				{ icon: 'dashboard', text: 'Dashboard' },
+				{ icon: 'timesheet', text: 'My Timesheet' },
+				{ icon: 'time-adjustments', text: 'Time Adjustments' },
+				{ icon: 'help', text: 'Help' }
+			] %}
+				<li class="menu__item">
+					<a href="#" class="menu__link {% if menu == loop.index %}is-active{% endif %}">
+						<span class="menu__link-icon menu__link-icon_{{item.icon}}"></span>
+						<span class="menu__link-text">{{item.text}}</span>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</nav>
+</div>
+<!-- end menu -->
