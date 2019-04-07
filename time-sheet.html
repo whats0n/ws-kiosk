@@ -1,0 +1,472 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Index page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" media="all" href="css/app.css" />
+  </head>
+  <body>
+    <!-- BEGIN content -->
+    <div class="out" id="root">
+      <div class="out__aside">
+        <!-- begin menu -->
+        <div class="menu">
+          <div class="menu__header">
+            <div class="menu__title">Computer Corner LLC</div>
+            <div class="menu__meta">Access Code 10020</div>
+          </div>
+          <nav class="menu__nav">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="#" class="menu__link is-active">
+                  <span class="menu__link-icon menu__link-icon_dashboard"></span>
+                  <span class="menu__link-text">Dashboard</span>
+                </a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link ">
+                  <span class="menu__link-icon menu__link-icon_timesheet"></span>
+                  <span class="menu__link-text">My Timesheet</span>
+                </a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link ">
+                  <span class="menu__link-icon menu__link-icon_time-adjustments"></span>
+                  <span class="menu__link-text">Time Adjustments</span>
+                </a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link ">
+                  <span class="menu__link-icon menu__link-icon_help"></span>
+                  <span class="menu__link-text">Help</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- end menu -->
+      </div>
+      <div class="out__container">
+        <!-- begin header -->
+        <header class="header">
+          <div class="header__title">Time Clock Manager</div>
+        </header>
+        <!-- end header -->
+        <div class="main main_simple">
+          <div class="inner inner_simple">
+            <div class="container">
+              <div class="frame">
+                <div class="frame__inner frame__inner_white">
+                  <form class="form frame__form">
+                    <div class="form__row">
+                      <div class="form__col">
+                        <div class="field form__field">
+                          <div class="field__label field__label_simple">Employee</div>
+                          <input type="text" class="input" readonly value="Alexander Zinoviev">
+                        </div>
+                      </div>
+                      <div class="form__col">
+                        <div class="field form__field">
+                          <div class="field__label field__label_simple">Location</div>
+                          <select class="select">
+                            <option value="Store 1">Store 1</option>
+                            <option value="Store 2">Store 2</option>
+                            <option value="Store 3">Store 3</option>
+                            <option value="Store 4">Store 4</option>
+                            <option value="Store 5">Store 5</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form__col">
+                        <div class="field form__field">
+                          <div class="field__label field__label_simple">From</div>
+                          <div class="calendar-box">
+                            <span class="calendar-box__icon"></span>
+                            <input type="text" class="input calendar-box__input" value="2/28/19">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__col">
+                        <div class="field form__field">
+                          <div class="field__label field__label_simple">To</div>
+                          <div class="calendar-box">
+                            <span class="calendar-box__icon"></span>
+                            <input type="text" class="input calendar-box__input" value="3/6/19">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__footer">
+                      <button class="btn btn_primary btn_sm">Search</button>
+                    </div>
+                  </form>
+                  <div class="frame__grid">
+                    <div class="frame__grid-header">
+                      <button class="btn-add frame__grid-add">
+                        <span class="btn-add__icon"></span>
+                        <span class="btn-add__text">Add Time Record</span>
+                      </button>
+                    </div>
+                    <div class="grid-table grid-table_fill grid-table_sm grid-table_adaptive">
+                      <div class="grid-table__header">
+                        <div class="grid-table__col grid-table__col_timesheet-date"><span>Date</span></div>
+                        <div class="grid-table__col grid-table__col_timesheet-store"><span>Store</span></div>
+                        <div class="grid-table__col grid-table__col_timesheet-in"><span>In</span></div>
+                        <div class="grid-table__col grid-table__col_timesheet-start-lunch"><span>Start Lunch</span></div>
+                        <div class="grid-table__col grid-table__col_timesheet-end-lunch"><span>End Lunch</span></div>
+                        <div class="grid-table__col grid-table__col_timesheet-out"><span>Out</span></div>
+                        <div class="grid-table__col grid-table__col_timesheet-duration"><span>Duration</span></div>
+                        <div class="grid-table__col grid-table__col_timesheet-action"><span>Action</span></div>
+                      </div>
+                      <div class="grid-table__total">
+                        <div class="grid-table__profile">
+                          <img src="https://placekitten.com/50/50" alt="avatar" class="grid-table__profile-img">
+                          <div class="grid-table__profile-title">Alexander Zinoviev</div>
+                        </div>
+                        <div class="grid-table__hours-worked">Hours Worked: 45h 32m</div>
+                        <div class="grid-table__break-time">Break Time: 3h 57m</div>
+                      </div>
+                      <div class="grid-table__body js-grid-slider">
+                        <div class="grid-table__row ">
+                          <div class="grid-table__col grid-table__col_timesheet-date" data-title="Date:">
+                            <div>Mon, Feb 28, 2019</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-store" data-title="Store:">
+                            <div>5th Street</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-in" data-title="In:">
+                            <div>11:01 am</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-start-lunch" data-title="Start Lunch:">
+                            <div>3:01 pm</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-end-lunch" data-title="End Lunch:">
+                            <div>3:31 pm</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-out" data-title="Out:">
+                            <div>6:00 pm</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-duration" data-title="Duration:">
+                            <div>6h 59m</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-action" data-title="Action:">
+                            <div><a href="#" class="link-secondary">Edit</a> | <a href="#" class="link-primary">Delete</a></div>
+                          </div>
+                        </div>
+                        <div class="grid-table__row ">
+                          <div class="grid-table__col grid-table__col_timesheet-date" data-title="Date:">
+                            <div>Mon, Feb 28, 2019</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-store" data-title="Store:">
+                            <div>5th Street</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-in" data-title="In:">
+                            <div>11:01 am</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-start-lunch" data-title="Start Lunch:">
+                            <div>3:01 pm</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-end-lunch" data-title="End Lunch:">
+                            <div>3:31 pm</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-out" data-title="Out:">
+                            <div>6:00 pm</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-duration" data-title="Duration:">
+                            <div>6h 59m</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-action" data-title="Action:">
+                            <div><a href="#" class="link-secondary">Edit</a> | <a href="#" class="link-primary">Delete</a></div>
+                          </div>
+                        </div>
+                        <div class="grid-table__row ">
+                          <div class="grid-table__col grid-table__col_timesheet-date" data-title="Date:">
+                            <div>Mon, Feb 28, 2019</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-store" data-title="Store:">
+                            <div>5th Street</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-in" data-title="In:">
+                            <div>11:01 am</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-start-lunch" data-title="Start Lunch:">
+                            <div>3:01 pm</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-end-lunch" data-title="End Lunch:">
+                            <div>3:31 pm</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-out" data-title="Out:">
+                            <div>6:00 pm</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-duration" data-title="Duration:">
+                            <div>6h 59m</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-action" data-title="Action:">
+                            <div><a href="#" class="link-secondary">Edit</a> | <a href="#" class="link-primary">Delete</a></div>
+                          </div>
+                        </div>
+                        <div class="grid-table__row ">
+                          <div class="grid-table__col grid-table__col_timesheet-date" data-title="Date:">
+                            <div>Mon, Feb 28, 2019</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-store" data-title="Store:">
+                            <div>5th Street</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-in" data-title="In:">
+                            <div>11:01 am</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-start-lunch" data-title="Start Lunch:">
+                            <div>3:01 pm</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-end-lunch" data-title="End Lunch:">
+                            <div>3:31 pm</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-out" data-title="Out:">
+                            <div>6:00 pm</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-duration" data-title="Duration:">
+                            <div>6h 59m</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-action" data-title="Action:">
+                            <div><a href="#" class="link-secondary">Edit</a> | <a href="#" class="link-primary">Delete</a></div>
+                          </div>
+                        </div>
+                        <div class="grid-table__row ">
+                          <div class="grid-table__col grid-table__col_timesheet-date" data-title="Date:">
+                            <div>Mon, Feb 28, 2019</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-store" data-title="Store:">
+                            <div>5th Street</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-in" data-title="In:">
+                            <div>11:01 am</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-start-lunch" data-title="Start Lunch:">
+                            <div>3:01 pm</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-end-lunch" data-title="End Lunch:">
+                            <div>3:31 pm</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-out" data-title="Out:">
+                            <div>6:00 pm</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-duration" data-title="Duration:">
+                            <div>6h 59m</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-action" data-title="Action:">
+                            <div><a href="#" class="link-secondary">Edit</a> | <a href="#" class="link-primary">Delete</a></div>
+                          </div>
+                        </div>
+                        <div class="grid-table__row ">
+                          <div class="grid-table__col grid-table__col_timesheet-date" data-title="Date:">
+                            <div>Mon, Feb 28, 2019</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-store" data-title="Store:">
+                            <div>5th Street</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-in" data-title="In:">
+                            <div>11:01 am</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-start-lunch" data-title="Start Lunch:">
+                            <div>3:01 pm</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-end-lunch" data-title="End Lunch:">
+                            <div>3:31 pm</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-out" data-title="Out:">
+                            <div>6:00 pm</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-duration" data-title="Duration:">
+                            <div>6h 59m</div>
+                          </div>
+                          <div class="grid-table__col grid-table__col_timesheet-action" data-title="Action:">
+                            <div><a href="#" class="link-secondary">Edit</a> | <a href="#" class="link-primary">Delete</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END content -->
+    <div class="modal" style="display: none;">
+      <div class="modal__container">
+        <div class="modal-content">
+          <div class="modal-content__header">
+            <button class="modal-content__close">
+              <span class="icon icon-close modal-content__close-in"></span>
+            </button>
+            <div class="modal-content__title">Employees Clocked In Now</div>
+          </div>
+          <div class="modal-content__body">
+            <div class="grid-table grid-table_fill grid-table_sm modal-content__grid-table">
+              <div class="grid-table__header">
+                <div class="grid-table__col grid-table__col_modal-clocked-in-employee"><span>Employee</span></div>
+                <div class="grid-table__col grid-table__col_modal-clocked-in-in"><span>In</span></div>
+                <div class="grid-table__col grid-table__col_modal-clocked-in-duration"><span>Duration</span></div>
+              </div>
+              <div class="grid-table__body ">
+                <div class="grid-table__row ">
+                  <div class="grid-table__col grid-table__col_modal-clocked-in-employee" data-title="Employee:">
+                    <div>Alex Johnson</div>
+                  </div>
+                  <div class="grid-table__col grid-table__col_modal-clocked-in-in" data-title="In:">
+                    <div>9:05 am</div>
+                  </div>
+                  <div class="grid-table__col grid-table__col_modal-clocked-in-duration" data-title="Duration:">
+                    <div>5h 40m</div>
+                  </div>
+                </div>
+                <div class="grid-table__row ">
+                  <div class="grid-table__col grid-table__col_modal-clocked-in-employee" data-title="Employee:">
+                    <div>Alex Johnson</div>
+                  </div>
+                  <div class="grid-table__col grid-table__col_modal-clocked-in-in" data-title="In:">
+                    <div>9:05 am</div>
+                  </div>
+                  <div class="grid-table__col grid-table__col_modal-clocked-in-duration" data-title="Duration:">
+                    <div>5h 40m</div>
+                  </div>
+                </div>
+                <div class="grid-table__row ">
+                  <div class="grid-table__col grid-table__col_modal-clocked-in-employee" data-title="Employee:">
+                    <div>Alex Johnson</div>
+                  </div>
+                  <div class="grid-table__col grid-table__col_modal-clocked-in-in" data-title="In:">
+                    <div>9:05 am</div>
+                  </div>
+                  <div class="grid-table__col grid-table__col_modal-clocked-in-duration" data-title="Duration:">
+                    <div>5h 40m</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-content__footer">
+              <button class="btn btn_white">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" style="display: none;">
+      <div class="modal__container">
+        <div class="modal-content">
+          <div class="modal-content__header">
+            <button class="modal-content__close">
+              <span class="icon icon-close modal-content__close-in"></span>
+            </button>
+            <div class="modal-content__title">Manual Add a Record</div>
+          </div>
+          <div class="modal-content__body">
+            <div class="form">
+              <div class="form__row">
+                <div class="form__col">
+                  <div class="field form__field">
+                    <div class="field__label field__label_simple">Employee</div>
+                    <select class="select">
+                      <option value="Employee 1">Employee 1</option>
+                      <option value="Employee 2">Employee 2</option>
+                      <option value="Employee 3">Employee 3</option>
+                      <option value="Employee 4">Employee 4</option>
+                      <option value="Employee 5">Employee 5</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs form__tabs">
+                <div class="tabs__controls">
+                  <a href="#" class="tabs__control is-active">Clock In/Out</a>
+                  <a href="#" class="tabs__control">Break In/Out</a>
+                </div>
+                <div class="tabs__container">
+                  <div class="tabs__content">
+                    <div class="form__row">
+                      <div class="form__col">
+                        <div class="field form__field">
+                          <div class="field__label field__label_simple">Clocked In</div>
+                          <div class="calendar-box">
+                            <span class="calendar-box__icon"></span>
+                            <input type="text" class="input calendar-box__input" value="2/28/19">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__col">
+                        <div class="field form__field">
+                          <div class="field__label field__label_simple">At</div>
+                          <select class="select">
+                            <option value="09:51">09:51</option>
+                            <option value="09:52">09:52</option>
+                            <option value="09:53">09:53</option>
+                            <option value="09:54">09:54</option>
+                            <option value="09:55">09:55</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__col form__col_lg">
+                        <label class="checkbox">
+                          <input type="checkbox" class="checkbox__input">
+                          <span class="checkbox__icon">
+                            <span class="icon icon-check checkbox__icon-in"></span>
+                          </span>
+                          <span class="checkbox__text">Remain Clocked In</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__col">
+                        <div class="field form__field">
+                          <div class="field__label field__label_simple">Clocked Out</div>
+                          <div class="calendar-box">
+                            <span class="calendar-box__icon"></span>
+                            <input type="text" class="input calendar-box__input" value="2/28/19">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__col">
+                        <div class="field form__field">
+                          <div class="field__label field__label_simple">At</div>
+                          <select class="select">
+                            <option value="09:51">09:51</option>
+                            <option value="09:52">09:52</option>
+                            <option value="09:53">09:53</option>
+                            <option value="09:54">09:54</option>
+                            <option value="09:55">09:55</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__col form__col_wide">
+                        <div class="field form__field">
+                          <div class="field__label field__label_simple">Notes</div>
+                          <input type="text" class="input">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form__footer">
+                <button class="btn btn_primary btn_sm">Add Time Request</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+</html>
