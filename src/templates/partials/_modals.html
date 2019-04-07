@@ -6,7 +6,7 @@
 		name: 'add-record'
 	}
 ] %}
-	<div class="modal" {% if not item.active %}style="display: none;"{% endif %}>
+	<div class="modal js-modal" data-modal="{{item.name}}">
 		<div class="modal__container">
 			{% include 'partials/modals/_' + item.name + '.html' %}
 		</div>

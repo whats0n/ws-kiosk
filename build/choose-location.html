@@ -13,14 +13,6 @@
     <!-- BEGIN content -->
     <div class="out" id="root">
       <div class="out__container">
-        <!-- begin header -->
-        <header class="header">
-          <button class="header__nav-btn">
-            <span></span>
-          </button>
-          <div class="header__title"></div>
-        </header>
-        <!-- end header -->
         <div class="main ">
           <div class="inner inner_center inner_darken">
             <div class="container">
@@ -49,11 +41,11 @@
       </div>
     </div>
     <!-- END content -->
-    <div class="modal" style="display: none;">
+    <div class="modal js-modal" data-modal="employee-clocked-in-now">
       <div class="modal__container">
         <div class="modal-content">
           <div class="modal-content__header">
-            <button class="modal-content__close">
+            <button class="modal-content__close js-modal-close">
               <span class="icon icon-close modal-content__close-in"></span>
             </button>
             <div class="modal-content__title">Employees Clocked In Now</div>
@@ -108,11 +100,11 @@
         </div>
       </div>
     </div>
-    <div class="modal" style="display: none;">
+    <div class="modal js-modal" data-modal="add-record">
       <div class="modal__container">
         <div class="modal-content">
           <div class="modal-content__header">
-            <button class="modal-content__close">
+            <button class="modal-content__close js-modal-close">
               <span class="icon icon-close modal-content__close-in"></span>
             </button>
             <div class="modal-content__title">Manual Add a Record</div>

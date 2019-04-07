@@ -14,12 +14,26 @@ body
 		flex: 0 0 auto
 		width: 275px
 		background: #343B43
+		transform: translateX(-100%)
+		transition: transform 0.3s
+		&.is-open
+			+gpu
+			~ .out__container
+				margin-left: 0
 		+md
-			display: none
+			position: fixed
+			z-index: 100
+			top: 0
+			left: 0
+			bottom: 0
 	&__container
 		display: flex
 		flex: 1 1 auto
 		flex-direction: column
+		margin-left: -275px
+		transition: margin-left 0.3s
+		+md
+			margin: 0
 
 
 .main

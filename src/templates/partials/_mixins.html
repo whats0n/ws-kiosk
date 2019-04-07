@@ -68,7 +68,7 @@
 		{% for item in props.list %}
 			<li class="section__item">
 				{% if item.text %}
-					<a href="#" class="section__link">
+					<a href="#" class="section__link {{item.classList}}" {{item.attrs | safe}}>
 						<span class="section__number">{{item.number}}</span>
 						<span class="section__text">{{item.text}}</span>
 					</a>

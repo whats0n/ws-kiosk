@@ -16,12 +16,14 @@
     <!-- BEGIN content -->
     <div class="out" id="root">
       {% if menu %}
-        <div class="out__aside">
+        <div class="out__aside js-menu">
           {% include 'partials/_menu.html' %}
         </div>
       {% endif %}
       <div class="out__container">
-        {% include 'partials/_header.html' %}
+        {% if not noHeader %}
+          {% include 'partials/_header.html' %}
+        {% endif %}
         <div class="main {{mainClass}}">
           <div class="inner {{innerClass}}">
             <div class="container">

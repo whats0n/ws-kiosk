@@ -181,13 +181,18 @@
 		flex: 1 1 37%
 	&__body 
 		position: relative
+	&__nav
+		text-align: center
 	&__prev,
 	&__next
 		+md 
-			position: absolute
-			z-index: 20
-			top: 50%
-			margin-top: -20px
+			// position: absolute
+			// z-index: 20
+			// top: 50%
+			// margin-top: -20px
+			display: inline-block
+			vertical-align: top
+			margin: 0 10px
 			border: 1px solid #E1E1E1
 			border-radius: 2px
 			width: 40px
@@ -197,9 +202,9 @@
 			svg
 				width: 20px
 				height: 20px
-	&__prev
-		+md 
-			left: -30px
-	&__next
-		+md 
-			right: -30px
+	// &__prev
+	// 	+md 
+	// 		left: -30px
+	// &__next
+	// 	+md 
+	// 		right: -30px

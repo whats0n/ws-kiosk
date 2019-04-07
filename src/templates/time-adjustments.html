@@ -27,7 +27,7 @@ headerTitle: 'Time Clock Manager'
 						{{mixins.section({
 							title: 'Employee Status',
 							list: [
-								{ text: 'Employees Clocked In Now', number: '3' },
+								{ text: 'Employees Clocked In Now', number: '3', attrs: 'data-modal-target="employee-clocked-in-now"', classList: "js-modal-open" },
 								{ text: 'Employee on Lunch', number: '1' },
 								{}
 							]
@@ -96,7 +96,7 @@ headerTitle: 'Time Clock Manager'
 			</form>
 			<div class="frame__grid">
 				<div class="frame__grid-header">
-					<button class="btn-add frame__grid-add">
+					<button class="btn-add frame__grid-add js-modal-open" data-modal-target="add-record">
 						<span class="btn-add__icon"></span>
 						<span class="btn-add__text">Add Time Record</span>
 					</button>

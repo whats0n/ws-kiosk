@@ -34,3 +34,46 @@ $(window).on('load resize', () => {
   }
 
 });
+
+const menuOpen = $('.js-menu-open');
+const menuClose = $('.js-menu-close');
+const menu = $('.js-menu');
+const IS_OPEN = 'is-open';
+const IS_ACTIVE = 'is-active';
+
+menuOpen.click(e => {
+  e.preventDefault();
+  menu.addClass(IS_OPEN);
+  menuOpen.addClass(IS_ACTIVE);
+});
+
+menuClose.click(e => {
+  e.preventDefault();
+  menu.removeClass(IS_OPEN);
+  menuOpen.removeClass(IS_ACTIVE);
+});
+
+
+//
+
+const modals = $('.js-modal[data-modal]');
+
+$('.js-modal-open').each((i, control) => {
+  control = $(control);
+  const modal = modals.filter(`[data-modal="${control.data('modal-target')}"]`);
+
+  control.on('click', e => {
+    e.preventDefault();
+    modal.addClass(IS_OPEN);
+  });
+});
+
+$('.js-modal-close').each((i, closeButton) => {
+  closeButton = $(closeButton);
+  const modal = closeButton.closest('.js-modal');
+
+  closeButton.on('click', e => {
+    e.preventDefault();
+    modal.removeClass(IS_OPEN);
+  });
+});
