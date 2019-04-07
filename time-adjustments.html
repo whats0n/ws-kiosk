@@ -12,13 +12,13 @@
   <body>
     <!-- BEGIN content -->
     <div class="out" id="root">
-      <div class="out__aside">
+      <div class="out__aside js-menu">
         <!-- begin menu -->
         <div class="menu">
-          <div class="menu__header">
+          <a href="#" class="menu__header js-menu-close">
             <div class="menu__title">Computer Corner LLC</div>
             <div class="menu__meta">Access Code 10020</div>
-          </div>
+          </a>
           <nav class="menu__nav">
             <ul class="menu__list">
               <li class="menu__item">
@@ -53,6 +53,9 @@
       <div class="out__container">
         <!-- begin header -->
         <header class="header">
+          <button class="header__nav-btn js-menu-open">
+            <span></span>
+          </button>
           <div class="header__title">Time Clock Manager</div>
         </header>
         <!-- end header -->
@@ -68,19 +71,19 @@
                           <div class="section__title">Pending Requests</div>
                           <ul class="section__list">
                             <li class="section__item">
-                              <a href="#" class="section__link">
+                              <a href="#" class="section__link ">
                                 <span class="section__number">4</span>
                                 <span class="section__text">Pending Timesheet Requests</span>
                               </a>
                             </li>
                             <li class="section__item">
-                              <a href="#" class="section__link">
+                              <a href="#" class="section__link ">
                                 <span class="section__number">0</span>
                                 <span class="section__text">Shift Switch Requests</span>
                               </a>
                             </li>
                             <li class="section__item">
-                              <a href="#" class="section__link">
+                              <a href="#" class="section__link ">
                                 <span class="section__number">1</span>
                                 <span class="section__text">Clock in Errors</span>
                               </a>
@@ -93,13 +96,13 @@
                           <div class="section__title">Employee Status</div>
                           <ul class="section__list">
                             <li class="section__item">
-                              <a href="#" class="section__link">
+                              <a href="#" class="section__link js-modal-open" data-modal-target="employee-clocked-in-now">
                                 <span class="section__number">3</span>
                                 <span class="section__text">Employees Clocked In Now</span>
                               </a>
                             </li>
                             <li class="section__item">
-                              <a href="#" class="section__link">
+                              <a href="#" class="section__link ">
                                 <span class="section__number">1</span>
                                 <span class="section__text">Employee on Lunch</span>
                               </a>
@@ -154,19 +157,19 @@
                           <div class="section__title">Pending Requests</div>
                           <ul class="section__list">
                             <li class="section__item">
-                              <a href="#" class="section__link">
+                              <a href="#" class="section__link ">
                                 <span class="section__number">4</span>
                                 <span class="section__text">Pending Timesheet Requests</span>
                               </a>
                             </li>
                             <li class="section__item">
-                              <a href="#" class="section__link">
+                              <a href="#" class="section__link ">
                                 <span class="section__number">0</span>
                                 <span class="section__text">Shift Switch Requests</span>
                               </a>
                             </li>
                             <li class="section__item">
-                              <a href="#" class="section__link">
+                              <a href="#" class="section__link ">
                                 <span class="section__number">1</span>
                                 <span class="section__text">Clock in Errors</span>
                               </a>
@@ -179,19 +182,19 @@
                           <div class="section__title">Employee Status</div>
                           <ul class="section__list">
                             <li class="section__item">
-                              <a href="#" class="section__link">
+                              <a href="#" class="section__link ">
                                 <span class="section__number">4</span>
                                 <span class="section__text">Scheduled Employees</span>
                               </a>
                             </li>
                             <li class="section__item">
-                              <a href="#" class="section__link">
+                              <a href="#" class="section__link ">
                                 <span class="section__number">3</span>
                                 <span class="section__text">Employees Clocked In Now</span>
                               </a>
                             </li>
                             <li class="section__item">
-                              <a href="#" class="section__link">
+                              <a href="#" class="section__link ">
                                 <span class="section__number">1</span>
                                 <span class="section__text">Employee on Lunch</span>
                               </a>
@@ -206,7 +209,7 @@
                   </form>
                   <div class="frame__grid">
                     <div class="frame__grid-header">
-                      <button class="btn-add frame__grid-add">
+                      <button class="btn-add frame__grid-add js-modal-open" data-modal-target="add-record">
                         <span class="btn-add__icon"></span>
                         <span class="btn-add__text">Add Time Record</span>
                       </button>
@@ -409,11 +412,11 @@
       </div>
     </div>
     <!-- END content -->
-    <div class="modal" style="display: none;">
+    <div class="modal js-modal" data-modal="employee-clocked-in-now">
       <div class="modal__container">
         <div class="modal-content">
           <div class="modal-content__header">
-            <button class="modal-content__close">
+            <button class="modal-content__close js-modal-close">
               <span class="icon icon-close modal-content__close-in"></span>
             </button>
             <div class="modal-content__title">Employees Clocked In Now</div>
@@ -468,11 +471,11 @@
         </div>
       </div>
     </div>
-    <div class="modal" style="display: none;">
+    <div class="modal js-modal" data-modal="add-record">
       <div class="modal__container">
         <div class="modal-content">
           <div class="modal-content__header">
-            <button class="modal-content__close">
+            <button class="modal-content__close js-modal-close">
               <span class="icon icon-close modal-content__close-in"></span>
             </button>
             <div class="modal-content__title">Manual Add a Record</div>
