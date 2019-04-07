@@ -1,0 +1,145 @@
+---
+title: Index page
+innerClass: 'inner_simple'
+mainClass: 'main_simple'
+menu: 1
+headerTitle: 'Time Clock Manager'
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<div class="frame">
+		<div class="frame__inner frame__inner_white">
+			<form class="form frame__form">
+				<div class="form__row">
+					<div class="form__col">
+						{{mixins.section({
+							title: 'Pending Requests',
+							list: [
+								{ text: 'Pending Timesheet Requests', number: '4' },
+								{ text: 'Shift Switch Requests', number: '0' },
+								{ text: 'Clock in Errors', number: '1' }
+							]
+						})}}
+					</div>
+					<div class="form__col">
+						{{mixins.section({
+							title: 'Employee Status',
+							list: [
+								{ text: 'Employees Clocked In Now', number: '3' },
+								{ text: 'Employee on Lunch', number: '1' },
+								{}
+							]
+						})}}
+					</div>
+				</div>
+				<div class="form__row">
+					<div class="form__col">
+						<div class="field form__field">
+							<div class="field__label field__label_simple">Employee</div>
+							<input type="text" class="input" readonly value="Alexander Zinoviev">
+						</div>
+					</div>
+					<div class="form__col">
+						<div class="field form__field">
+							<div class="field__label field__label_simple">Location</div>
+							<select class="select">
+								{% for item in range(0,5) %}
+									<option value="Store {{loop.index}}">Store {{loop.index}}</option>
+								{% endfor %}
+							</select>
+						</div>
+					</div>
+					<div class="form__col">
+						<div class="field form__field">
+							<div class="field__label field__label_simple">From</div>
+							{{mixins.calendarField({
+								value: '2/28/19'
+							})}}
+						</div>
+					</div>
+					<div class="form__col">
+						<div class="field form__field">
+							<div class="field__label field__label_simple">To</div>
+							{{mixins.calendarField({
+								value: '3/6/19'
+							})}}
+						</div>
+					</div>
+				</div>
+				<div class="form__row">
+					<div class="form__col">
+						{{mixins.section({
+							title: 'Pending Requests',
+							list: [
+								{ text: 'Pending Timesheet Requests', number: '4' },
+								{ text: 'Shift Switch Requests', number: '0' },
+								{ text: 'Clock in Errors', number: '1' }
+							]
+						})}}
+					</div>
+					<div class="form__col">
+						{{mixins.section({
+							title: 'Employee Status',
+							list: [
+								{ text: 'Scheduled Employees', number: '4' },
+								{ text: 'Employees Clocked In Now', number: '3' },
+								{ text: 'Employee on Lunch', number: '1' }
+							]
+						})}}
+					</div>
+				</div>
+				<div class="form__footer">
+					<button class="btn btn_primary btn_sm">Search</button>
+				</div>
+			</form>
+			<div class="frame__grid">
+				<div class="frame__grid-header">
+					<button class="btn-add frame__grid-add">
+						<span class="btn-add__icon"></span>
+						<span class="btn-add__text">Add Time Record</span>
+					</button>
+				</div>
+				{% set action = '<a href="#" class="link-approve">Approve</a> | <a href="#" class="link-decline">Decline</a> | <a href="#" class="link-primary">Edit</a>' %}
+				{{mixins.gridTable({
+					classList: 'grid-table_fill grid-table_sm grid-table_adaptive',
+					headers: [
+						{ name: 'adjustments-date', text: 'Date' },
+						{ name: 'adjustments-employee', text: 'Employee' },
+						{ name: 'adjustments-store', text: 'Store' },
+						{ name: 'adjustments-in', text: 'In' },
+						{ name: 'adjustments-start-lunch', text: 'Start Lunch' },
+						{ name: 'adjustments-end-lunch', text: 'End Lunch' },
+						{ name: 'adjustments-out', text: 'Out' },
+						{ name: 'adjustments-duration', text: 'Duration' },
+						{ name: 'adjustments-action', text: 'Action' }
+					],
+					rows: [
+						{
+							classList: 'is-approved',
+							items: [ 'Mon, Feb 28, 2019', 'Alex Johnson',  '5th Street', '11:01 am', '3:01 pm', '3:31 pm', '6:00 pm', '6h 59m', 'Approved' ]
+						},
+						{
+							classList: 'is-declined',
+							items: [ 'Mon, Feb 28, 2019', 'Alex Johnson',  '5th Street', '11:01 am', '3:01 pm', '3:31 pm', '6:00 pm', '6h 59m', 'Declined' ]
+						},
+						{
+							items: [ 'Mon, Feb 28, 2019', 'Alex Johnson',  '5th Street', '11:01 am', '3:01 pm', '3:31 pm', '6:00 pm', '6h 59m', action ]
+						},
+						{
+							items: [ 'Mon, Feb 28, 2019', 'Alex Johnson',  '5th Street', '11:01 am', '3:01 pm', '3:31 pm', '6:00 pm', '6h 59m', action ]
+						},
+						{
+							items: [ 'Mon, Feb 28, 2019', 'Alex Johnson',  '5th Street', '11:01 am', '3:01 pm', '3:31 pm', '6:00 pm', '6h 59m', action ]
+						},
+						{
+							items: [ 'Mon, Feb 28, 2019', 'Alex Johnson',  '5th Street', '11:01 am', '3:01 pm', '3:31 pm', '6:00 pm', '6h 59m', action ]
+						}
+					]
+				})}}
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

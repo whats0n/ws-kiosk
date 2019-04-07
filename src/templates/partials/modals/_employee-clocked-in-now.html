@@ -1,0 +1,33 @@
+<div class="modal-content">
+	<div class="modal-content__header">
+		<button class="modal-content__close">
+			<span class="icon icon-close modal-content__close-in"></span>
+		</button>
+		<div class="modal-content__title">Employees Clocked In Now</div>
+	</div>
+	<div class="modal-content__body">
+		{{mixins.gridTable({
+			classList: 'grid-table_fill grid-table_sm modal-content__grid-table',
+			noSlider: true,
+			headers: [
+				{ name: 'modal-clocked-in-employee', text: 'Employee' },
+				{ name: 'modal-clocked-in-in', text: 'In' },
+				{ name: 'modal-clocked-in-duration', text: 'Duration' }
+			],
+			rows: [
+				{
+					items: [ 'Alex Johnson', '9:05 am', '5h 40m' ]
+				},
+				{
+					items: [ 'Alex Johnson', '9:05 am', '5h 40m' ]
+				},
+				{
+					items: [ 'Alex Johnson', '9:05 am', '5h 40m' ]
+				}
+			]
+		})}}
+		<div class="modal-content__footer">
+			<button class="btn btn_white">Close</button>
+		</div>
+	</div>
+</div>

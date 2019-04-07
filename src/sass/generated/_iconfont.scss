@@ -10,6 +10,8 @@
 }
 
 $icon-cancel: "\EA01";
+$icon-check: "\EA02";
+$icon-close: "\EA03";
 
 
 %icon {
@@ -29,3 +31,5 @@ $icon-cancel: "\EA01";
 }
 
 .icon-cancel:before { content: $icon-cancel; }
+.icon-check:before { content: $icon-check; }
+.icon-close:before { content: $icon-close; }

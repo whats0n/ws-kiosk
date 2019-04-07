@@ -5,9 +5,19 @@
 	border-radius: 2px
 	max-width: 1104px
 	background: #ECECEC
+	+sm
+		padding: 0
+		background: none
+	&_simplest
+		+sm
+			border: 0
 	&__inner
 		margin: 0 auto
 		max-width: 965px
+		&_white
+			padding: 15px 15px 25px
+			max-width: 1044px
+			background: $white
 	&__row
 		margin-bottom: 44px
 		+clr 
@@ -15,11 +25,32 @@
 		float: left
 		margin-right: 56px
 		width: 251px
+		+md
+			margin: 0 0 20px
+			width: 100%
 	&__clock-in
 		margin-top: 13px
+		+xs
+			margin-top: 20px
 	&__location
 		float: right
 		margin-top: 13px
 		width: 251px
+		+xs
+			width: 100%
 	&__information
 		margin-bottom: 53px
+	&__form
+		margin: 0 auto 25px
+		max-width: 941px
+		+ .frame__grid
+			.frame__grid-header
+				margin-top: -45px
+				+sm
+					margin-top: 0
+	&__grid
+		&-header
+			margin-bottom: 5px
+			+clr
+		&-add
+			float: right

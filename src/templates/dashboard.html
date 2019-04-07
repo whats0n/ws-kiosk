@@ -3,12 +3,13 @@ title: Index page
 innerClass: 'inner_simple'
 mainClass: 'main_simple'
 menu: 1
+headerTitle: 'Time Clock Manager'
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
 	
-	<div class="frame">
+	<div class="frame frame_simplest">
 		<div class="frame__inner">
 			<div class="frame__row">
 				<div class="date frame__date">
@@ -49,6 +50,7 @@ menu: 1
 			</div>
 			<div class="frame__box">
 				{{mixins.gridTable({
+					classList: 'grid-table_simplest grid-table_adaptive',
 					headers: [
 						{ name: 'date', text: 'Date' },
 						{ name: 'one-six', text: 'Clock In' },

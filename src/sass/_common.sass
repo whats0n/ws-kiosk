@@ -8,10 +8,14 @@ body
 .out
 	display: flex
 	height: 100vh
+	+md
+		flex-direction: column
 	&__aside
 		flex: 0 0 auto
 		width: 275px
 		background: #343B43
+		+md
+			display: none
 	&__container
 		display: flex
 		flex: 1 1 auto
@@ -45,3 +49,19 @@ body
 			vertical-align: middle
 			width: 100%
 			text-align: left
+
+.link-primary,
+.link-secondary,
+.link-approve,
+.link-decline
+	text-decoration: none
+	&:hover
+		text-decoration: underline
+.link-primary
+	color: $primary
+.link-secondary
+	color: $secondary
+.link-approve
+	color: $green
+.link-decline
+	color: $red

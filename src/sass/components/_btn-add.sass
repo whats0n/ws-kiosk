@@ -1,0 +1,37 @@
+.btn-add
+	position: relative
+	padding: 10px 2px 10px 40px
+	color: #20B3F3
+	background: none
+	font-size: 0
+	&__icon
+		position: absolute
+		top: 50%
+		left: 4px
+		margin-top: -12px
+		border: 2px solid $primary
+		border-radius: 50%
+		width: 24px
+		height: 24px
+		&:before,
+		&:after
+			content: ''
+			position: absolute
+		&:before
+			top: 3px
+			left: 50%
+			bottom: 3px
+			margin-left: -1px
+			border-left: 2px solid $primary
+		&:after
+			top: 50%
+			left: 3px
+			right: 3px
+			margin-top: -1px
+			border-top: 2px solid $primary
+	&__text
+		display: inline-block
+		vertical-align: top
+		font-size: 16px
+		font-weight: 500
+		line-height: 1.25

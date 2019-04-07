@@ -6,3 +6,5 @@ PageList:
 - file: clock-out.html
 - file: configuration.html
 - file: dashboard.html
+- file: time-sheet.html
+- file: time-adjustments.html

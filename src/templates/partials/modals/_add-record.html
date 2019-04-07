@@ -1,0 +1,92 @@
+<div class="modal-content">
+	<div class="modal-content__header">
+		<button class="modal-content__close">
+			<span class="icon icon-close modal-content__close-in"></span>
+		</button>
+		<div class="modal-content__title">Manual Add a Record</div>
+	</div>
+	<div class="modal-content__body">
+		<div class="form">
+			<div class="form__row">
+				<div class="form__col">
+					<div class="field form__field">
+						<div class="field__label field__label_simple">Employee</div>
+						<select class="select">
+							{% for item in range(0,5) %}
+								<option value="Employee {{loop.index}}">Employee {{loop.index}}</option>
+							{% endfor %}
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="tabs form__tabs">
+				<div class="tabs__controls">
+					<a href="#" class="tabs__control is-active">Clock In/Out</a>
+					<a href="#" class="tabs__control">Break In/Out</a>
+				</div>
+				<div class="tabs__container">
+					<div class="tabs__content">
+						<div class="form__row">
+							<div class="form__col">
+								<div class="field form__field">
+									<div class="field__label field__label_simple">Clocked In</div>
+									{{mixins.calendarField({
+										value: '2/28/19'
+									})}}
+								</div>
+							</div>
+							<div class="form__col">
+								<div class="field form__field">
+									<div class="field__label field__label_simple">At</div>
+									<select class="select">
+										{% for item in range(0,5) %}
+											<option value="09:5{{loop.index}}">09:5{{loop.index}}</option>
+										{% endfor %}
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="form__row">
+							<div class="form__col form__col_lg">
+								{{mixins.checkbox({
+									text: 'Remain Clocked In'
+								})}}
+							</div>
+						</div>
+						<div class="form__row">
+							<div class="form__col">
+								<div class="field form__field">
+									<div class="field__label field__label_simple">Clocked Out</div>
+									{{mixins.calendarField({
+										value: '2/28/19'
+									})}}
+								</div>
+							</div>
+							<div class="form__col">
+								<div class="field form__field">
+									<div class="field__label field__label_simple">At</div>
+									<select class="select">
+										{% for item in range(0,5) %}
+											<option value="09:5{{loop.index}}">09:5{{loop.index}}</option>
+										{% endfor %}
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="form__row">
+							<div class="form__col form__col_wide">
+								<div class="field form__field">
+									<div class="field__label field__label_simple">Notes</div>
+									<input type="text" class="input">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form__footer">
+				<button class="btn btn_primary btn_sm">Add Time Request</button>
+			</div>
+		</div>
+	</div>
+</div>

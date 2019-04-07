@@ -3,14 +3,21 @@
 	border: 1px solid #D6D6D6
 	color: #3C434D
 	background: $white
+	+sm
+		display: block
 	&__status,
 	&__box
 		flex: 1 1 50%
+		width: 50%
+		+sm
+			width: 100%
 	&__box
 		padding: 20px 15px 37px
 	&__status
 		position: relative
 		padding: 15px
+		+sm
+			padding: 10px 0
 		&:not(:last-child)
 			&:before
 				content: ''
@@ -18,7 +25,14 @@
 				top: 32px
 				right: 0
 				bottom: 32px
-				border-right: 1px solid #000000
+				border-right: 1px solid $black
+				+sm
+					top: auto
+					left: 32px
+					right: 32px
+					bottom: 0
+					border: 0
+					border-bottom: 1px solid $black
 	&__title
 		padding: 15px
 		font-weight: 500
@@ -29,6 +43,10 @@
 	&__subtitle
 		font-size: 22px
 		line-height: 1
+		+lg
+			font-size: 18px
+		+sm 
+			font-size: 16px
 	&__value
 		flex: 1 1 auto
 		&-item
@@ -48,3 +66,10 @@
 		max-width: 339px
 		display: flex
 		justify-content: space-between
+		+xs
+			display: block
+			max-width: none
+	&__col
+		+xs
+			&:not(:last-child)
+				margin-bottom: 15px

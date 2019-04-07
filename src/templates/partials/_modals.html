@@ -1,0 +1,14 @@
+{% for item in [
+	{
+		name: 'employee-clocked-in-now'
+	},
+	{
+		name: 'add-record'
+	}
+] %}
+	<div class="modal" {% if not item.active %}style="display: none;"{% endif %}>
+		<div class="modal__container">
+			{% include 'partials/modals/_' + item.name + '.html' %}
+		</div>
+	</div>
+{% endfor %}

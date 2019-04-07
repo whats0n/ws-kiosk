@@ -5,6 +5,13 @@
 </div>
 {% endmacro %}
 
+{% macro calendarField(props) %}
+<div class="calendar-box">
+	<span class="calendar-box__icon"></span>
+	<input type="text" class="input calendar-box__input" {% if props.value %}value="{{props.value}}"{% endif %}>
+</div>
+{% endmacro %}
+
 {% macro switcher(props) %}
 <label class="switcher">
 	<input type="checkbox" class="switcher__input">
@@ -24,20 +31,62 @@
 {% endmacro %}
 
 {% macro gridTable(props) %}
-<div class="grid-table">
+<div class="grid-table {{props.classList}}">
 	<div class="grid-table__header">
 		{% for item in props.headers %}
-			<div class="grid-table__col grid-table__col_{{item.name}}">{{item.text}}</div>
+			<div class="grid-table__col grid-table__col_{{item.name}}"><span>{{item.text}}</span></div>
 		{% endfor %}
 	</div>
-	<div class="grid-table__body">
+	{% if props.total %}
+		<div class="grid-table__total">
+			<div class="grid-table__profile">
+				<img src="{{props.total.profile.img}}" alt="avatar" class="grid-table__profile-img">
+				<div class="grid-table__profile-title">{{props.total.profile.title}}</div>
+			</div>
+			<div class="grid-table__hours-worked">Hours Worked: {{props.total.hoursWorked}}</div>
+			<div class="grid-table__break-time">Break Time: {{props.total.breakTime}}</div>
+		</div>
+	{% endif %}
+	<div class="grid-table__body {% if not props.noSlider %}js-grid-slider{% endif %}">
 		{% for row in props.rows %}
-			<div class="grid-table__row">
+			<div class="grid-table__row {{row.classList}}">
 				{% for item in row.items %}
-					<div class="grid-table__col grid-table__col_{{props.headers[loop.index0].name}}">{{item}}</div>
+					<div class="grid-table__col grid-table__col_{{props.headers[loop.index0].name}}" data-title="{{props.headers[loop.index0].text}}:">
+						<div>{{item | safe}}</div>
+					</div>
 				{% endfor %}
 			</div>
 		{% endfor %}
 	</div>
 </div>
+{% endmacro %}
+
+{% macro section(props) %}
+<div class="section">
+	<div class="section__title">{{props.title}}</div>
+	<ul class="section__list">
+		{% for item in props.list %}
+			<li class="section__item">
+				{% if item.text %}
+					<a href="#" class="section__link">
+						<span class="section__number">{{item.number}}</span>
+						<span class="section__text">{{item.text}}</span>
+					</a>
+				{% endif %}
+			</li>
+		{% endfor %}
+	</ul>
+</div>
+{% endmacro %}
+
+{% macro checkbox(props) %}
+<label class="checkbox">
+	<input type="checkbox" class="checkbox__input">
+	<span class="checkbox__icon">
+		<span class="icon icon-check checkbox__icon-in"></span>
+	</span>
+	{% if props.text %}
+		<span class="checkbox__text">{{props.text}}</span>
+	{% endif %}
+</label>
 {% endmacro %}
